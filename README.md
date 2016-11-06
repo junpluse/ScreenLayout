@@ -34,3 +34,7 @@ Then build ScreenLayout framework to enable `@import ScreenLayout` syntax with h
 
 ### Advanced
 Alternatively, you can add the project to your workspace and adopt the provided configuration files or manually copy the files under the ScreenLayout subdirectory into your project.
+
+## License
+
+ScreenLayout is released under the MIT license. See LICENSE for details.
