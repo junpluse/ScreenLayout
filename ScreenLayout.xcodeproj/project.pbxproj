@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF356A6E1A24726800346FD0 /* ScreenLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356A6D1A24726800346FD0 /* ScreenLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356A741A24726800346FD0 /* ScreenLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF356A681A24726800346FD0 /* ScreenLayout.framework */; };
+		BF356A8A1A2473FA00346FD0 /* SCLGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356A881A2473FA00346FD0 /* SCLGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356A8B1A2473FA00346FD0 /* SCLGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356A891A2473FA00346FD0 /* SCLGeometry.m */; };
+		BF356A8E1A2474AB00346FD0 /* SCLCodingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356A8C1A2474AB00346FD0 /* SCLCodingUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356A8F1A2474AB00346FD0 /* SCLCodingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356A8D1A2474AB00346FD0 /* SCLCodingUtilities.m */; };
+		BF356A961A247BC600346FD0 /* SCLScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356A941A247BC600346FD0 /* SCLScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356A971A247BC600346FD0 /* SCLScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356A951A247BC600346FD0 /* SCLScreen.m */; };
+		BF356A9A1A24816000346FD0 /* SCLLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356A981A24816000346FD0 /* SCLLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356A9B1A24816000346FD0 /* SCLLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356A991A24816000346FD0 /* SCLLayout.m */; };
+		BF356A9E1A24817900346FD0 /* SCLLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356A9C1A24817900346FD0 /* SCLLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356A9F1A24817900346FD0 /* SCLLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356A9D1A24817900346FD0 /* SCLLayoutConstraint.m */; };
+		BF356B361A25979F00346FD0 /* SCLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B341A25979F00346FD0 /* SCLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356B371A25979F00346FD0 /* SCLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B351A25979F00346FD0 /* SCLSessionManager.m */; };
+		BF356B3A1A25995F00346FD0 /* SCLSessionMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B381A25995F00346FD0 /* SCLSessionMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356B3B1A25995F00346FD0 /* SCLSessionMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B391A25995F00346FD0 /* SCLSessionMessage.m */; };
+		BF356B521A25BBE000346FD0 /* UIView+ScreenLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B501A25BBE000346FD0 /* UIView+ScreenLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356B531A25BBE000346FD0 /* UIView+ScreenLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B511A25BBE000346FD0 /* UIView+ScreenLayout.m */; };
+		BF356B561A25BC9900346FD0 /* SCLMotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B541A25BC9900346FD0 /* SCLMotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356B571A25BC9900346FD0 /* SCLMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B551A25BC9900346FD0 /* SCLMotionManager.m */; };
+		BF356B5E1A25C66200346FD0 /* SCLPinchLayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B5C1A25C66200346FD0 /* SCLPinchLayoutManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF356B5F1A25C66200346FD0 /* SCLPinchLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B5D1A25C66200346FD0 /* SCLPinchLayoutManager.m */; };
+		BF356B691A25D28400346FD0 /* SCLGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B681A25D28400346FD0 /* SCLGeometryTests.m */; };
+		BF356B6B1A25D2EF00346FD0 /* SCLScreenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B6A1A25D2EF00346FD0 /* SCLScreenTests.m */; };
+		BF356B6D1A25D39F00346FD0 /* SCLLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B6C1A25D39F00346FD0 /* SCLLayoutTests.m */; };
+		BF356B881A25ED1500346FD0 /* SCLPinchGestureEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B861A25ED1500346FD0 /* SCLPinchGestureEvent.h */; };
+		BF356B891A25ED1500346FD0 /* SCLPinchGestureEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B871A25ED1500346FD0 /* SCLPinchGestureEvent.m */; };
+		BF356B951A25EEA100346FD0 /* SCLPinchGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = BF356B931A25EEA100346FD0 /* SCLPinchGestureRecognizer.h */; };
+		BF356B961A25EEA100346FD0 /* SCLPinchGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B941A25EEA100346FD0 /* SCLPinchGestureRecognizer.m */; };
+		BF356B9E1A2600DF00346FD0 /* SCLLayoutConstraintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B9D1A2600DF00346FD0 /* SCLLayoutConstraintTests.m */; };
+		BF356BA01A2600FA00346FD0 /* SCLSessionMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF356B9F1A2600FA00346FD0 /* SCLSessionMessageTests.m */; };
+		BF7235701A36C83800ECA04D /* SCLCoordinateSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = BF72356F1A36C83800ECA04D /* SCLCoordinateSpace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF72357A1A36D8AB00ECA04D /* SCLCoordinateSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7235791A36D8AB00ECA04D /* SCLCoordinateSpace.m */; };
+		BF72357E1A37F8FF00ECA04D /* SCLLayoutObservingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF72357D1A37F8FF00ECA04D /* SCLLayoutObservingTests.m */; };
+		BF9D7C0A1A302FB000593E5A /* SCLLayoutObserving.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9D7C081A302FB000593E5A /* SCLLayoutObserving.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF9D7C0B1A302FB000593E5A /* SCLLayoutObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D7C091A302FB000593E5A /* SCLLayoutObserving.m */; };
+		BF9D7C121A30378400593E5A /* SCLLayout+ConstraintStack.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9D7C101A30378400593E5A /* SCLLayout+ConstraintStack.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BF9D7C221A316B0100593E5A /* SCLLayoutPool.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9D7C201A316B0100593E5A /* SCLLayoutPool.h */; };
+		BF9D7C231A316B0100593E5A /* SCLLayoutPool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D7C211A316B0100593E5A /* SCLLayoutPool.m */; };
+		BF9D7C251A316BC700593E5A /* SCLLayoutPoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D7C241A316BC700593E5A /* SCLLayoutPoolTests.m */; };
+		BFF6A7E71A282826002F88D2 /* UIDevice+ScreenLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF6A7E51A282826002F88D2 /* UIDevice+ScreenLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFF6A7E81A282826002F88D2 /* UIDevice+ScreenLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF6A7E61A282826002F88D2 /* UIDevice+ScreenLayout.m */; };
+		BFF6A7EB1A2828C4002F88D2 /* ScreenLayoutBase.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF6A7E91A2828C4002F88D2 /* ScreenLayoutBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFF6A7EF1A283B66002F88D2 /* SCLPinchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF6A7ED1A283B66002F88D2 /* SCLPinchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFF6A7F01A283B66002F88D2 /* SCLPinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF6A7EE1A283B66002F88D2 /* SCLPinchViewController.m */; };
+		BFF6A8391A287C4C002F88D2 /* ScreenLayoutBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF6A8381A287C4C002F88D2 /* ScreenLayoutBase.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF356A751A24726800346FD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF356A5F1A24726800346FD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF356A671A24726800346FD0;
+			remoteInfo = ScreenLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF356A681A24726800346FD0 /* ScreenLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScreenLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF356A6C1A24726800346FD0 /* ScreenLayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenLayout-Info.plist"; sourceTree = "<group>"; };
+		BF356A6D1A24726800346FD0 /* ScreenLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenLayout.h; sourceTree = "<group>"; };
+		BF356A731A24726800346FD0 /* ScreenLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF356A791A24726800346FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF356A881A2473FA00346FD0 /* SCLGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLGeometry.h; sourceTree = "<group>"; };
+		BF356A891A2473FA00346FD0 /* SCLGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLGeometry.m; sourceTree = "<group>"; };
+		BF356A8C1A2474AB00346FD0 /* SCLCodingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLCodingUtilities.h; sourceTree = "<group>"; };
+		BF356A8D1A2474AB00346FD0 /* SCLCodingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLCodingUtilities.m; sourceTree = "<group>"; };
+		BF356A941A247BC600346FD0 /* SCLScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLScreen.h; sourceTree = "<group>"; };
+		BF356A951A247BC600346FD0 /* SCLScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLScreen.m; sourceTree = "<group>"; };
+		BF356A981A24816000346FD0 /* SCLLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLLayout.h; sourceTree = "<group>"; };
+		BF356A991A24816000346FD0 /* SCLLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayout.m; sourceTree = "<group>"; };
+		BF356A9C1A24817900346FD0 /* SCLLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLLayoutConstraint.h; sourceTree = "<group>"; };
+		BF356A9D1A24817900346FD0 /* SCLLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutConstraint.m; sourceTree = "<group>"; };
+		BF356B341A25979F00346FD0 /* SCLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLSessionManager.h; sourceTree = "<group>"; };
+		BF356B351A25979F00346FD0 /* SCLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLSessionManager.m; sourceTree = "<group>"; };
+		BF356B381A25995F00346FD0 /* SCLSessionMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLSessionMessage.h; sourceTree = "<group>"; };
+		BF356B391A25995F00346FD0 /* SCLSessionMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLSessionMessage.m; sourceTree = "<group>"; };
+		BF356B501A25BBE000346FD0 /* UIView+ScreenLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenLayout.h"; sourceTree = "<group>"; };
+		BF356B511A25BBE000346FD0 /* UIView+ScreenLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenLayout.m"; sourceTree = "<group>"; };
+		BF356B541A25BC9900346FD0 /* SCLMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLMotionManager.h; sourceTree = "<group>"; };
+		BF356B551A25BC9900346FD0 /* SCLMotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLMotionManager.m; sourceTree = "<group>"; };
+		BF356B5C1A25C66200346FD0 /* SCLPinchLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPinchLayoutManager.h; sourceTree = "<group>"; };
+		BF356B5D1A25C66200346FD0 /* SCLPinchLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPinchLayoutManager.m; sourceTree = "<group>"; };
+		BF356B681A25D28400346FD0 /* SCLGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLGeometryTests.m; sourceTree = "<group>"; };
+		BF356B6A1A25D2EF00346FD0 /* SCLScreenTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLScreenTests.m; sourceTree = "<group>"; };
+		BF356B6C1A25D39F00346FD0 /* SCLLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutTests.m; sourceTree = "<group>"; };
+		BF356B861A25ED1500346FD0 /* SCLPinchGestureEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPinchGestureEvent.h; sourceTree = "<group>"; };
+		BF356B871A25ED1500346FD0 /* SCLPinchGestureEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPinchGestureEvent.m; sourceTree = "<group>"; };
+		BF356B931A25EEA100346FD0 /* SCLPinchGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPinchGestureRecognizer.h; sourceTree = "<group>"; };
+		BF356B941A25EEA100346FD0 /* SCLPinchGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPinchGestureRecognizer.m; sourceTree = "<group>"; };
+		BF356B9D1A2600DF00346FD0 /* SCLLayoutConstraintTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutConstraintTests.m; sourceTree = "<group>"; };
+		BF356B9F1A2600FA00346FD0 /* SCLSessionMessageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLSessionMessageTests.m; sourceTree = "<group>"; };
+		BF72356F1A36C83800ECA04D /* SCLCoordinateSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLCoordinateSpace.h; sourceTree = "<group>"; };
+		BF7235791A36D8AB00ECA04D /* SCLCoordinateSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLCoordinateSpace.m; sourceTree = "<group>"; };
+		BF72357D1A37F8FF00ECA04D /* SCLLayoutObservingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutObservingTests.m; sourceTree = "<group>"; };
+		BF9D7C081A302FB000593E5A /* SCLLayoutObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLLayoutObserving.h; sourceTree = "<group>"; };
+		BF9D7C091A302FB000593E5A /* SCLLayoutObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutObserving.m; sourceTree = "<group>"; };
+		BF9D7C101A30378400593E5A /* SCLLayout+ConstraintStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCLLayout+ConstraintStack.h"; sourceTree = "<group>"; };
+		BF9D7C201A316B0100593E5A /* SCLLayoutPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLLayoutPool.h; sourceTree = "<group>"; };
+		BF9D7C211A316B0100593E5A /* SCLLayoutPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutPool.m; sourceTree = "<group>"; };
+		BF9D7C241A316BC700593E5A /* SCLLayoutPoolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLLayoutPoolTests.m; sourceTree = "<group>"; };
+		BFF6A7E51A282826002F88D2 /* UIDevice+ScreenLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ScreenLayout.h"; sourceTree = "<group>"; };
+		BFF6A7E61A282826002F88D2 /* UIDevice+ScreenLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ScreenLayout.m"; sourceTree = "<group>"; };
+		BFF6A7E91A2828C4002F88D2 /* ScreenLayoutBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenLayoutBase.h; sourceTree = "<group>"; };
+		BFF6A7ED1A283B66002F88D2 /* SCLPinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPinchViewController.h; sourceTree = "<group>"; };
+		BFF6A7EE1A283B66002F88D2 /* SCLPinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPinchViewController.m; sourceTree = "<group>"; };
+		BFF6A8381A287C4C002F88D2 /* ScreenLayoutBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenLayoutBase.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF356A641A24726800346FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF356A701A24726800346FD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF356A741A24726800346FD0 /* ScreenLayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF356A5E1A24726800346FD0 = {
+			isa = PBXGroup;
+			children = (
+				BF356A6A1A24726800346FD0 /* ScreenLayout */,
+				BF356A771A24726800346FD0 /* ScreenLayoutTests */,
+				BF356A691A24726800346FD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF356A691A24726800346FD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF356A681A24726800346FD0 /* ScreenLayout.framework */,
+				BF356A731A24726800346FD0 /* ScreenLayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF356A6A1A24726800346FD0 /* ScreenLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BF356A6D1A24726800346FD0 /* ScreenLayout.h */,
+				BFF6A7E91A2828C4002F88D2 /* ScreenLayoutBase.h */,
+				BFF6A8381A287C4C002F88D2 /* ScreenLayoutBase.m */,
+				BF356A8C1A2474AB00346FD0 /* SCLCodingUtilities.h */,
+				BF356A8D1A2474AB00346FD0 /* SCLCodingUtilities.m */,
+				BF356A881A2473FA00346FD0 /* SCLGeometry.h */,
+				BF356A891A2473FA00346FD0 /* SCLGeometry.m */,
+				BF356A981A24816000346FD0 /* SCLLayout.h */,
+				BF356A991A24816000346FD0 /* SCLLayout.m */,
+				BF9D7C101A30378400593E5A /* SCLLayout+ConstraintStack.h */,
+				BF356A9C1A24817900346FD0 /* SCLLayoutConstraint.h */,
+				BF356A9D1A24817900346FD0 /* SCLLayoutConstraint.m */,
+				BF9D7C081A302FB000593E5A /* SCLLayoutObserving.h */,
+				BF9D7C091A302FB000593E5A /* SCLLayoutObserving.m */,
+				BF9D7C201A316B0100593E5A /* SCLLayoutPool.h */,
+				BF9D7C211A316B0100593E5A /* SCLLayoutPool.m */,
+				BF356A941A247BC600346FD0 /* SCLScreen.h */,
+				BF356A951A247BC600346FD0 /* SCLScreen.m */,
+				BF356B341A25979F00346FD0 /* SCLSessionManager.h */,
+				BF356B351A25979F00346FD0 /* SCLSessionManager.m */,
+				BF356B381A25995F00346FD0 /* SCLSessionMessage.h */,
+				BF356B391A25995F00346FD0 /* SCLSessionMessage.m */,
+				BF356B461A25BB2300346FD0 /* iOS */,
+				BF356A6B1A24726800346FD0 /* Supporting Files */,
+			);
+			path = ScreenLayout;
+			sourceTree = "<group>";
+		};
+		BF356A6B1A24726800346FD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF356A6C1A24726800346FD0 /* ScreenLayout-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF356A771A24726800346FD0 /* ScreenLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF356B681A25D28400346FD0 /* SCLGeometryTests.m */,
+				BF356B6A1A25D2EF00346FD0 /* SCLScreenTests.m */,
+				BF356B6C1A25D39F00346FD0 /* SCLLayoutTests.m */,
+				BF356B9D1A2600DF00346FD0 /* SCLLayoutConstraintTests.m */,
+				BF9D7C241A316BC700593E5A /* SCLLayoutPoolTests.m */,
+				BF72357D1A37F8FF00ECA04D /* SCLLayoutObservingTests.m */,
+				BF356B9F1A2600FA00346FD0 /* SCLSessionMessageTests.m */,
+				BF356A781A24726800346FD0 /* Supporting Files */,
+			);
+			path = ScreenLayoutTests;
+			sourceTree = "<group>";
+		};
+		BF356A781A24726800346FD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF356A791A24726800346FD0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF356B461A25BB2300346FD0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BF72356F1A36C83800ECA04D /* SCLCoordinateSpace.h */,
+				BF7235791A36D8AB00ECA04D /* SCLCoordinateSpace.m */,
+				BF356B541A25BC9900346FD0 /* SCLMotionManager.h */,
+				BF356B551A25BC9900346FD0 /* SCLMotionManager.m */,
+				BFF6A7E51A282826002F88D2 /* UIDevice+ScreenLayout.h */,
+				BFF6A7E61A282826002F88D2 /* UIDevice+ScreenLayout.m */,
+				BF356B501A25BBE000346FD0 /* UIView+ScreenLayout.h */,
+				BF356B511A25BBE000346FD0 /* UIView+ScreenLayout.m */,
+				BF356B921A25ED5C00346FD0 /* Pinch */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BF356B921A25ED5C00346FD0 /* Pinch */ = {
+			isa = PBXGroup;
+			children = (
+				BF356B861A25ED1500346FD0 /* SCLPinchGestureEvent.h */,
+				BF356B871A25ED1500346FD0 /* SCLPinchGestureEvent.m */,
+				BF356B931A25EEA100346FD0 /* SCLPinchGestureRecognizer.h */,
+				BF356B941A25EEA100346FD0 /* SCLPinchGestureRecognizer.m */,
+				BF356B5C1A25C66200346FD0 /* SCLPinchLayoutManager.h */,
+				BF356B5D1A25C66200346FD0 /* SCLPinchLayoutManager.m */,
+				BFF6A7ED1A283B66002F88D2 /* SCLPinchViewController.h */,
+				BFF6A7EE1A283B66002F88D2 /* SCLPinchViewController.m */,
+			);
+			name = Pinch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BF356A651A24726800346FD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF356A6E1A24726800346FD0 /* ScreenLayout.h in Headers */,
+				BFF6A7EB1A2828C4002F88D2 /* ScreenLayoutBase.h in Headers */,
+				BF356A8E1A2474AB00346FD0 /* SCLCodingUtilities.h in Headers */,
+				BF356A8A1A2473FA00346FD0 /* SCLGeometry.h in Headers */,
+				BF356A9A1A24816000346FD0 /* SCLLayout.h in Headers */,
+				BF356A9E1A24817900346FD0 /* SCLLayoutConstraint.h in Headers */,
+				BF9D7C0A1A302FB000593E5A /* SCLLayoutObserving.h in Headers */,
+				BF356A961A247BC600346FD0 /* SCLScreen.h in Headers */,
+				BF356B361A25979F00346FD0 /* SCLSessionManager.h in Headers */,
+				BF356B3A1A25995F00346FD0 /* SCLSessionMessage.h in Headers */,
+				BF7235701A36C83800ECA04D /* SCLCoordinateSpace.h in Headers */,
+				BF356B561A25BC9900346FD0 /* SCLMotionManager.h in Headers */,
+				BF356B5E1A25C66200346FD0 /* SCLPinchLayoutManager.h in Headers */,
+				BFF6A7EF1A283B66002F88D2 /* SCLPinchViewController.h in Headers */,
+				BFF6A7E71A282826002F88D2 /* UIDevice+ScreenLayout.h in Headers */,
+				BF9D7C221A316B0100593E5A /* SCLLayoutPool.h in Headers */,
+				BF9D7C121A30378400593E5A /* SCLLayout+ConstraintStack.h in Headers */,
+				BF356B881A25ED1500346FD0 /* SCLPinchGestureEvent.h in Headers */,
+				BF356B521A25BBE000346FD0 /* UIView+ScreenLayout.h in Headers */,
+				BF356B951A25EEA100346FD0 /* SCLPinchGestureRecognizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BF356A671A24726800346FD0 /* ScreenLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF356A7E1A24726800346FD0 /* Build configuration list for PBXNativeTarget "ScreenLayout" */;
+			buildPhases = (
+				BF356A631A24726800346FD0 /* Sources */,
+				BF356A641A24726800346FD0 /* Frameworks */,
+				BF356A651A24726800346FD0 /* Headers */,
+				BF356A661A24726800346FD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenLayout;
+			productName = ScreenLayout;
+			productReference = BF356A681A24726800346FD0 /* ScreenLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF356A721A24726800346FD0 /* ScreenLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF356A811A24726800346FD0 /* Build configuration list for PBXNativeTarget "ScreenLayoutTests" */;
+			buildPhases = (
+				BF356A6F1A24726800346FD0 /* Sources */,
+				BF356A701A24726800346FD0 /* Frameworks */,
+				BF356A711A24726800346FD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF356A761A24726800346FD0 /* PBXTargetDependency */,
+			);
+			name = ScreenLayoutTests;
+			productName = ScreenLayoutTests;
+			productReference = BF356A731A24726800346FD0 /* ScreenLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF356A5F1A24726800346FD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SCL;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Jun Tanaka";
+				TargetAttributes = {
+					BF356A671A24726800346FD0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					BF356A721A24726800346FD0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = BF356A621A24726800346FD0 /* Build configuration list for PBXProject "ScreenLayout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF356A5E1A24726800346FD0;
+			productRefGroup = BF356A691A24726800346FD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF356A671A24726800346FD0 /* ScreenLayout */,
+				BF356A721A24726800346FD0 /* ScreenLayoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF356A661A24726800346FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF356A711A24726800346FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF356A631A24726800346FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF356A971A247BC600346FD0 /* SCLScreen.m in Sources */,
+				BF72357A1A36D8AB00ECA04D /* SCLCoordinateSpace.m in Sources */,
+				BF356B5F1A25C66200346FD0 /* SCLPinchLayoutManager.m in Sources */,
+				BF9D7C0B1A302FB000593E5A /* SCLLayoutObserving.m in Sources */,
+				BF356B571A25BC9900346FD0 /* SCLMotionManager.m in Sources */,
+				BFF6A8391A287C4C002F88D2 /* ScreenLayoutBase.m in Sources */,
+				BF356A9B1A24816000346FD0 /* SCLLayout.m in Sources */,
+				BF356B891A25ED1500346FD0 /* SCLPinchGestureEvent.m in Sources */,
+				BF356B531A25BBE000346FD0 /* UIView+ScreenLayout.m in Sources */,
+				BF356A8B1A2473FA00346FD0 /* SCLGeometry.m in Sources */,
+				BFF6A7F01A283B66002F88D2 /* SCLPinchViewController.m in Sources */,
+				BF356B371A25979F00346FD0 /* SCLSessionManager.m in Sources */,
+				BF356A9F1A24817900346FD0 /* SCLLayoutConstraint.m in Sources */,
+				BF356B3B1A25995F00346FD0 /* SCLSessionMessage.m in Sources */,
+				BF356A8F1A2474AB00346FD0 /* SCLCodingUtilities.m in Sources */,
+				BF356B961A25EEA100346FD0 /* SCLPinchGestureRecognizer.m in Sources */,
+				BFF6A7E81A282826002F88D2 /* UIDevice+ScreenLayout.m in Sources */,
+				BF9D7C231A316B0100593E5A /* SCLLayoutPool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF356A6F1A24726800346FD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF356B6B1A25D2EF00346FD0 /* SCLScreenTests.m in Sources */,
+				BF9D7C251A316BC700593E5A /* SCLLayoutPoolTests.m in Sources */,
+				BF356B9E1A2600DF00346FD0 /* SCLLayoutConstraintTests.m in Sources */,
+				BF356B6D1A25D39F00346FD0 /* SCLLayoutTests.m in Sources */,
+				BF72357E1A37F8FF00ECA04D /* SCLLayoutObservingTests.m in Sources */,
+				BF356B691A25D28400346FD0 /* SCLGeometryTests.m in Sources */,
+				BF356BA01A2600FA00346FD0 /* SCLSessionMessageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF356A761A24726800346FD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF356A671A24726800346FD0 /* ScreenLayout */;
+			targetProxy = BF356A751A24726800346FD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BF356A7C1A24726800346FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF356A7D1A24726800346FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BF356A7F1A24726800346FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ScreenLayout/ScreenLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.junpluse.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BF356A801A24726800346FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "ScreenLayout/ScreenLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.junpluse.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BF356A821A24726800346FD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScreenLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.junpluse.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF356A831A24726800346FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScreenLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.junpluse.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF356A621A24726800346FD0 /* Build configuration list for PBXProject "ScreenLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF356A7C1A24726800346FD0 /* Debug */,
+				BF356A7D1A24726800346FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF356A7E1A24726800346FD0 /* Build configuration list for PBXNativeTarget "ScreenLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF356A7F1A24726800346FD0 /* Debug */,
+				BF356A801A24726800346FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF356A811A24726800346FD0 /* Build configuration list for PBXNativeTarget "ScreenLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF356A821A24726800346FD0 /* Debug */,
+				BF356A831A24726800346FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF356A5F1A24726800346FD0 /* Project object */;
+}
