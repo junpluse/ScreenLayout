@@ -17,7 +17,7 @@
 
 ## Paper
 
-- [Pinch: an interface that relates applications on multiple touch-screen by ‘pinching' gesture](http://dl.acm.org/citation.cfm?id=2426088)
+- [Using Pinching Gesture to Relate Applications Running on Discrete Touch-Screen Devices](http://www.igi-global.com/article/using-pinching-gesture-to-relate-applications-running-on-discrete-touch-screen-devices/84123)
 
 ## Installation
 
