@@ -3,7 +3,7 @@
 # ScreenLayout.framework
 
 - Connects multiple iOS device screens by 'Pinch' gesture
-- Built on top of MultipeerConnectivity, no other dependencies
+- Built on top of [MultipeerConnectivity](https://developer.apple.com/reference/multipeerconnectivity), no other dependencies
 - Communicates via Bluetooth, no Wi-Fi required
 
 ## Video
