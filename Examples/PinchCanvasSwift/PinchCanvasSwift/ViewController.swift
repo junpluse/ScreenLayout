@@ -22,27 +22,27 @@ class ViewController: SCLPinchViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.sessionManager.startPeerInvitationsWithServiceType("pinchcanvas", errorHandler: { (error) -> Void in
+        self.sessionManager.startPeerInvitations(withServiceType: "pinchcanvas", errorHandler: { (error) -> Void in
             print("invitations failed with error: \(error)")
         })
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         self.sessionManager.stopPeerInviations();
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true;
     }
     
     func updateLabels() {
         let numberOfConnectedPeers = self.sessionManager.session.connectedPeers.count
-        let numberOfConnectedScreens = SCLScreen.mainScreen().connectedScreens.count;
+        let numberOfConnectedScreens = SCLScreen.main().connectedScreens.count;
         
         self.textLabel.text = "\(numberOfConnectedScreens) of \(numberOfConnectedPeers) screens connected";
     }
@@ -51,31 +51,31 @@ class ViewController: SCLPinchViewController {
         var angle: CGFloat = 0.0
         var frame: CGRect = self.view.bounds
         
-        let localScreen = SCLScreen.mainScreen()
-        if (localScreen.layout != nil) {
+        let localScreen = SCLScreen.main()
+        if (localScreen?.layout != nil) {
             // align image rotation to the first screen in the layout
-            let originScreen: SCLScreen = localScreen.layout.screens[0] as! SCLScreen
-            angle = originScreen.convertAngle(0.0, toCoordinateSpace: self.view)
+            let originScreen: SCLScreen = localScreen!.layout.screens[0] 
+            angle = originScreen.convertAngle(0.0, to: self.view)
             
             // extend image frame to the entire bounds of the layout
-            frame = localScreen.layout.boundsInScreen(localScreen)
-            frame = localScreen.convertRect(frame, toCoordinateSpace: self.view)
+            frame = (localScreen?.layout.bounds(in: localScreen))!
+            frame = (localScreen?.convert(frame, to: self.view))!
         }
         
-        UIView.animateWithDuration(0.25, animations: { () -> Void in
-            self.imageView.transform = CGAffineTransformMakeRotation(angle)
+        UIView.animate(withDuration: 0.25, animations: { () -> Void in
+            self.imageView.transform = CGAffineTransform(rotationAngle: angle)
             self.imageView.frame = frame
         })
     }
     
     // remote peer changed state
-    override func session(session: MCSession!, peer peerID: MCPeerID!, didChangeState state: MCSessionState) {
+    override func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
-        case .NotConnected:
+        case .notConnected:
             print("peer not connected: \(peerID)")
-        case .Connecting:
+        case .connecting:
             print("peer connecting: \(peerID)")
-        case .Connected:
+        case .connected:
             print("peer connected: \(peerID)")
         }
         
@@ -83,7 +83,7 @@ class ViewController: SCLPinchViewController {
     }
     
     // screen layout changed
-    override func layoutDidChangeForScreens(affectedScreens: [AnyObject]!) {
+    override func layoutDidChange(for affectedScreens: [SCLScreen]!) {
         self.updateLabels()
         self.updateImageFrame()
     }
