@@ -27,7 +27,7 @@ extern NSString *const SCLSessionMessageNameDeactivateConstraints;
 
 @interface SCLSessionManager (SCLSessionMessaging)
 
-- (BOOL)sendMessage:(SCLSessionMessage *)message toPeers:(NSArray *)peerIDs withMode:(MCSessionSendDataMode)mode error:(NSError **)error;
+- (BOOL)sendMessage:(SCLSessionMessage *)message toPeers:(NSArray<MCPeerID *> *)peerIDs withMode:(MCSessionSendDataMode)mode error:(NSError **)error;
 
 - (void)handleReceivedMessage:(SCLSessionMessage *)message fromPeer:(MCPeerID *)peerID;
 

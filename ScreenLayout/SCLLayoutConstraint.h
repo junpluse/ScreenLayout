@@ -9,6 +9,8 @@
 #import "ScreenLayoutBase.h"
 
 @class SCLScreen;
+@class SCLLayoutConstraint;
+@class SCLLayoutConstraintItem;
 
 /**
  @abstract SCLLayoutConstraint defines a relative geometry relationship between screens.
@@ -20,17 +22,17 @@
  @param items An array constaining the SCLLayoutConstraintItem objects.
  @return The newly-initialized constraint.
  */
-- (instancetype)initWithItems:(NSArray *)items NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItems:(NSArray<SCLLayoutConstraintItem *> *)items NS_DESIGNATED_INITIALIZER;
 
 /**
  @abstract The items in the receiver.
  */
-@property (readonly, nonatomic, copy) NSArray *items;
+@property (readonly, nonatomic, copy) NSArray<SCLLayoutConstraintItem *> *items;
 
 /**
  @abstract The screens in the receiver's items.
  */
-@property (readonly, nonatomic) NSArray *screens;
+@property (readonly, nonatomic) NSArray<SCLScreen *> *screens;
 
 /**
  @abstract The unique identifier of the receiver.

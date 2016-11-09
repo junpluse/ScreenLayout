@@ -9,7 +9,7 @@
 #import "SCLLayoutObserving.h"
 
 
-typedef void(^SCLLayoutObserverBlock)(NSArray *affectedScreens);
+typedef void(^SCLLayoutObserverBlock)(NSArray<SCLScreen *> *affectedScreens);
 
 
 #pragma mark -

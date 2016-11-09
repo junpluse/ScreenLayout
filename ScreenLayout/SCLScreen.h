@@ -78,12 +78,12 @@ extern NSString *const SCLScreenPeerIDUserDefaultsKey;
 /**
  @abstract The active constraints that contains receiver. (read-only)
  */
-@property (readonly, nonatomic) NSArray *constraints;
+@property (readonly, nonatomic) NSArray<SCLLayoutConstraint *> *constraints;
 
 /**
  @abstract The other screens in the layout that constains the receiver. (read-only)
  */
-@property (readonly, nonatomic) NSArray *connectedScreens;
+@property (readonly, nonatomic) NSArray<SCLScreen *> *connectedScreens;
 
 /**
  @abstract Returns the rectangle represents the specified screen's frame in the receiver's coordinate system.
@@ -161,14 +161,14 @@ extern NSString *const SCLScreenPeerIDUserDefaultsKey;
  @param point A point specified in the receiver's local coordinate system (bounds).
  @return The screens that contain point.
  */
-- (NSArray *)screensAtPoint:(CGPoint)point;
+- (NSArray<SCLScreen *> *)screensAtPoint:(CGPoint)point;
 
 /**
  @abstract Returns the screens that intersect a specified rectangle.
  @param rect A rectangle specified in the receiver's local coordinate system (bounds).
  @return The screens that intersect rect.
  */
-- (NSArray *)screensIntersectRect:(CGRect)rect;
+- (NSArray<SCLScreen *> *)screensIntersectRect:(CGRect)rect;
 
 /**
  @abstract Executes a given block using each screens connected to the receiver. This method uses NSArray's -enumerateObjectsUsingBlock: internaly.
@@ -181,6 +181,6 @@ extern NSString *const SCLScreenPeerIDUserDefaultsKey;
  @param block The block to apply to screens. This block has no return value and takes three arguments: the screen, its frame in the local coordinate system (bounds) of the receiver, and a reference to a Boolean value to stop further processing of the connected screens.
  @return An array containing screens that pass the test.
  */
-- (NSArray *)screensPassingTest:(BOOL(^)(SCLScreen *screen, CGRect frame, BOOL *stop))predicate;
+- (NSArray<SCLScreen *> *)screensPassingTest:(BOOL(^)(SCLScreen *screen, CGRect frame, BOOL *stop))predicate;
 
 @end

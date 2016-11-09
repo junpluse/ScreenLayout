@@ -23,19 +23,19 @@
 /**
  @abstract The screens in the receiver.
  */
-@property (readonly, nonatomic) NSArray *screens;
+@property (readonly, nonatomic) NSArray<SCLScreen *> *screens;
 
 /**
  @abstract The active constraints composing the receiver.
  */
-@property (readonly, nonatomic) NSArray *constraints;
+@property (readonly, nonatomic) NSArray<SCLLayoutConstraint *> *constraints;
 
 /**
  @abstract Returns the constraints that contain all of the specified screens.
  @param screens One or more screens in the layout.
  @return The constraints containing all of screens.
  */
-- (NSArray *)constraintsContainingScreens:(NSArray *)screens;
+- (NSArray<SCLLayoutConstraint *> *)constraintsContainingScreens:(NSArray<SCLScreen *> *)screens;
 
 /**
  @abstract Returns the smallest rectangle that contains all of screens in the receiver, in the specified screen's coordinate system (bounds).
@@ -91,7 +91,7 @@
  @return An array constaining the screens affected by the constraints.
  @discussion This method also posts a SCLLayoutDidActivateConstraintsNotification with a nil object and a userInfo dictionary containing the constraints and the affected screens.
  */
-+ (NSArray *)activateConstraints:(NSArray *)constraints;
++ (NSArray<SCLScreen *> *)activateConstraints:(NSArray<SCLLayoutConstraint *> *)constraints;
 
 /**
  @abstract Deactivates each constraint in the specified array, and returns an array that contains the screens affected by the deactivation.
@@ -99,7 +99,7 @@
  @return An array constaining the screens affected by the constraints.
  @discussion This method also posts a SCLLayoutDidDeactivateConstraintsNotification with a nil object and a userInfo dictionary containing the constraints and the affected screens.
  */
-+ (NSArray *)deactivateConstraints:(NSArray *)constraints;
++ (NSArray<SCLScreen *> *)deactivateConstraints:(NSArray<SCLLayoutConstraint *> *)constraints;
 
 @end
 
