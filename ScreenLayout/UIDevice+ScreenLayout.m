@@ -193,6 +193,46 @@ typedef struct SCLDeviceScreenSpecs {
             specs.margins.bottom = 0.67;
             specs.margins.right  = 0.17;
         }
+        else if (digit1 == 8 && digit2 == 1) {
+            // iPhone 6s (8,1)
+            specs.ppi            = 326;
+            specs.margins.top    = 0.67;
+            specs.margins.left   = 0.17;
+            specs.margins.bottom = 0.67;
+            specs.margins.right  = 0.17;
+        }
+        else if (digit1 == 8 && digit2 <= 2) {
+            // iPhone 6s Plus (8,2)
+            specs.ppi            = 401;
+            specs.margins.top    = 0.72;
+            specs.margins.left   = 0.18;
+            specs.margins.bottom = 0.72;
+            specs.margins.right  = 0.18;
+        }
+        else if (digit1 == 8 && digit2 == 4) {
+            // iPhone SE (8,4)
+            specs.ppi            = 326;
+            specs.margins.top    = 0.69;
+            specs.margins.left   = 0.17;
+            specs.margins.bottom = 0.69;
+            specs.margins.right  = 0.17;
+        }
+        else if (digit1 == 9 && (digit2 == 1 || digit2 == 3)) {
+            // iPhone 7 (9,1 or 9,3)
+            specs.ppi            = 326;
+            specs.margins.top    = 0.67;
+            specs.margins.left   = 0.17;
+            specs.margins.bottom = 0.67;
+            specs.margins.right  = 0.17;
+        }
+        else if (digit1 == 9 && (digit2 == 2 || digit2 == 4)) {
+            // iPhone 7 Plus (9,2 or 9,4)
+            specs.ppi            = 401;
+            specs.margins.top    = 0.72;
+            specs.margins.left   = 0.18;
+            specs.margins.bottom = 0.72;
+            specs.margins.right  = 0.18;
+        }
     }
     else if ([identifier hasPrefix:@"iPod"]) {
         if (digit1 == 1) {
