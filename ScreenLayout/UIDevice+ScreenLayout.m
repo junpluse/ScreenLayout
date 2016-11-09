@@ -126,6 +126,14 @@ typedef struct SCLDeviceScreenSpecs {
             specs.margins.bottom = 0.82;
             specs.margins.right  = 0.39;
         }
+        else if (digit1 == 6 && digit2 >= 3 && digit2 <= 4) {
+            // iPad Pro 9.7 inch (6,3-4)
+            specs.ppi            = 264;
+            specs.margins.top    = 0.82;
+            specs.margins.left   = 0.39;
+            specs.margins.bottom = 0.82;
+            specs.margins.right  = 0.39;
+        }
     }
     else if ([identifier hasPrefix:@"iPhone"]) {
         if (digit1 == 1 && digit2 == 1) {
