@@ -21,19 +21,17 @@
 
 ## Installation
 
-### iOS 8 Embedded Framework
-Add the ScreenLayout.xcodeproj to your project and adding ScreenLayout.framework to the Embedded Binaries section on the General tab of your app's target.
+### Carthage
 
-![Embedded Binaries](./Images/EmbeddedBinaries.png)
+To integrate `ScreenLayout` into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
 
-Then build ScreenLayout framework to enable `@import ScreenLayout` syntax with header modules. This step is not necessary if you don't mind the Xcode warning message displayed until you build your app.
+```ogdl
+github "junpluse/ScreenLayout"
+```
 
-![Build Framework](./Images/BuildFramework.png)
+### Manually
 
-**Note**: this method does not currently play nicely with workspaces. For some unknown reason, Xcode simply rejects adding ScreenLayout.framework as an embedded binary when ScreenLayout.xcodeproj is placed in the workspace. This only works when ScreenLayout.xcodeproj is added as a subproject to the current target's project.
-
-### Advanced
-Alternatively, you can add the project to your workspace and adopt the provided configuration files or manually copy the files under the ScreenLayout subdirectory into your project.
+You can also manually install the framework by dragging and dropping the `ScreenLayout.xcodeproj` into your project or workspace.
 
 ## License
 
