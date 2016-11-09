@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SCLSessionMessage : NSObject <NSCopying, NSSecureCoding>
 
+- (instancetype)init NS_UNAVAILABLE;
+
 - (instancetype)initWithName:(nonnull NSString *)name object:(nullable id<NSObject, NSSecureCoding>)object;
 - (instancetype)initWithName:(nonnull NSString *)name object:(nullable id<NSObject, NSSecureCoding>)object ofClasses:(nullable NSArray *)classes NS_DESIGNATED_INITIALIZER;
 

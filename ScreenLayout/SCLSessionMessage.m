@@ -112,26 +112,22 @@ NSString *const SCLSessionMessageNameDeactivateConstraints = @"SCLSessionMessage
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [self init];
-    if (!self) {
-        return nil;
-    }
-    
-    _name = [aDecoder scl_decodeObjectOfClass:[NSString class] forSelector:@selector(name)];
-    _classNames = [aDecoder scl_decodeObjectOfClasses:@[[NSSet class], [NSString class]] forSelector:@selector(classNames)];
+    NSString *name = [aDecoder scl_decodeObjectOfClass:[NSString class] forSelector:@selector(name)];
+    NSSet *classNames = [aDecoder scl_decodeObjectOfClasses:@[[NSSet class], [NSString class]] forSelector:@selector(classNames)];
+    id<NSObject, NSSecureCoding> object = nil;
     
     NSMutableArray *classes = [[NSMutableArray alloc] init];
-    [_classNames enumerateObjectsUsingBlock:^(NSString *className, BOOL *stop) {
+    [classNames enumerateObjectsUsingBlock:^(NSString *className, BOOL *stop) {
         Class class = NSClassFromString(className);
         if (class) {
             [classes addObject:class];
         }
     }];
     if (classes.count > 0) {
-        _object = [aDecoder scl_decodeObjectOfClasses:classes forSelector:@selector(object)];
+        object = [aDecoder scl_decodeObjectOfClasses:classes forSelector:@selector(object)];
     }
-    
-    return self;
+
+    return [self initWithName:name object:object ofClasses:classes];
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder

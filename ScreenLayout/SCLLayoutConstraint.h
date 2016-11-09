@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface SCLLayoutConstraint : NSObject <NSCopying, NSSecureCoding>
 
+- (instancetype)init NS_UNAVAILABLE;
+
 /**
  @abstract Creates a SCLLayoutConstraint instance with the specified items.
  @param items An array constaining the SCLLayoutConstraintItem objects.
@@ -47,6 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract SCLLayoutConstraintItem defines relative geometry information for the screen in the constraint.
  */
 @interface SCLLayoutConstraintItem : NSObject <NSCopying, NSSecureCoding>
+
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  @abstract Creates a SCLLayoutConstraintItem instance with the specified screen, anchor point and rotation.

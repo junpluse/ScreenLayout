@@ -90,14 +90,15 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [self init];
+    NSArray *items = [aDecoder scl_decodeArrayOfObjectsOfClass:[SCLLayoutConstraintItem class] forSelector:@selector(items)];
+
+    self = [self initWithItems:items];
     if (!self) {
         return nil;
     }
     
     _uuid = [aDecoder scl_decodeObjectOfClass:[NSUUID class] forSelector:@selector(uuid)];
-    _items = [aDecoder scl_decodeArrayOfObjectsOfClass:[SCLLayoutConstraintItem class] forSelector:@selector(items)];
-    
+
     return self;
 }
 
@@ -176,16 +177,11 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [self init];
-    if (!self) {
-        return nil;
-    }
-    
-    _screen = [aDecoder scl_decodeObjectOfClass:[SCLScreen class] forSelector:@selector(screen)];
-    _anchor = [aDecoder scl_decodeCGPointForSelector:@selector(anchor)];
-    _rotation = [aDecoder scl_decodeCGFloatForSelector:@selector(rotation)];
-    
-    return self;
+    SCLScreen *screen = [aDecoder scl_decodeObjectOfClass:[SCLScreen class] forSelector:@selector(screen)];
+    CGPoint anchor = [aDecoder scl_decodeCGPointForSelector:@selector(anchor)];
+    CGFloat rotation = [aDecoder scl_decodeCGFloatForSelector:@selector(rotation)];
+
+    return [self initWithScreen:screen anchor:anchor rotation:rotation];
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
