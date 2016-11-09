@@ -8,6 +8,8 @@
 
 #import "SCLSessionMessage.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  @abstract A SCLPinchLayoutManager automatically creates SCLLayoutConstraint objects by 'pinch' gestures across screens.
  @discussion To start, you have to add the SCLPinchLayoutManager.gestureRecognizer to your view and set SCLPinchLayoutManager.enabled to YES.
@@ -19,12 +21,12 @@
  @param sessionManager The SCLSessionManager object which the receiver uses to communicate gesture informations to remote peers.
  @return The newly-initialized layout manager.
  */
-- (instancetype)initWithSessionManager:(SCLSessionManager *)sessionManager NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSessionManager:(nullable SCLSessionManager *)sessionManager NS_DESIGNATED_INITIALIZER;
 
 /**
  @abstract The session manager object which the receiver uses.
  */
-@property (nonatomic, strong) SCLSessionManager *sessionManager;
+@property (nonatomic, strong, nullable) SCLSessionManager *sessionManager;
 
 /**
  @abstract Determines whether the receiver is currently handling gesture informations. Default is NO.
@@ -76,6 +78,8 @@
  @abstract The gesture recognizer to detect gesture events in the local screen.
  @discussion You have to add this gesture recognizer to your view.
  */
-@property (readonly, nonatomic) UIGestureRecognizer *gestureRecognizer;
+@property (readonly, nonatomic, nonnull) UIGestureRecognizer *gestureRecognizer;
 
 @end
+
+NS_ASSUME_NONNULL_END

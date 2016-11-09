@@ -12,10 +12,10 @@
 
 @interface UIView (ScreenLayout) <SCLCoordinateSpace>
 
-- (CGVector)scl_convertVector:(CGVector)vector toView:(UIView *)view;
-- (CGVector)scl_convertVector:(CGVector)vector fromView:(UIView *)view;
-- (CGFloat)scl_convertAngle:(CGFloat)angle toView:(UIView *)view;
-- (CGFloat)scl_convertAngle:(CGFloat)angle fromView:(UIView *)view;
+- (CGVector)scl_convertVector:(CGVector)vector toView:(nullable UIView *)view;
+- (CGVector)scl_convertVector:(CGVector)vector fromView:(nullable UIView *)view;
+- (CGFloat)scl_convertAngle:(CGFloat)angle toView:(nullable UIView *)view;
+- (CGFloat)scl_convertAngle:(CGFloat)angle fromView:(nullable UIView *)view;
 
 - (CGPoint)scl_convertPointToMainScreen:(CGPoint)point;
 - (CGPoint)scl_convertPointFromMainScreen:(CGPoint)point;

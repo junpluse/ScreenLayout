@@ -11,6 +11,6 @@
 
 @interface SCLPinchGestureRecognizer : UIGestureRecognizer
 
-- (CGVector)vectorInView:(UIView *)view;
+- (CGVector)vectorInView:(nullable UIView *)view;
 
 @end

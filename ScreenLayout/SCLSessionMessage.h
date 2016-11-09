@@ -8,15 +8,16 @@
 
 #import "SCLSessionManager.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface SCLSessionMessage : NSObject <NSCopying, NSSecureCoding>
 
-- (instancetype)initWithName:(NSString *)name object:(id<NSObject, NSSecureCoding>)object;
-- (instancetype)initWithName:(NSString *)name object:(id<NSObject, NSSecureCoding>)object ofClasses:(NSArray *)classes NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithName:(nonnull NSString *)name object:(nullable id<NSObject, NSSecureCoding>)object;
+- (instancetype)initWithName:(nonnull NSString *)name object:(nullable id<NSObject, NSSecureCoding>)object ofClasses:(nullable NSArray *)classes NS_DESIGNATED_INITIALIZER;
 
-@property (readonly, nonatomic, copy) NSString *name;
+@property (readonly, nonatomic, copy, nonnull) NSString *name;
 
-@property (readonly, nonatomic, strong) id object;
+@property (readonly, nonatomic, strong, nullable) id object;
 
 @end
 
@@ -27,12 +28,14 @@ extern NSString *const SCLSessionMessageNameDeactivateConstraints;
 
 @interface SCLSessionManager (SCLSessionMessaging)
 
-- (BOOL)sendMessage:(SCLSessionMessage *)message toPeers:(NSArray<MCPeerID *> *)peerIDs withMode:(MCSessionSendDataMode)mode error:(NSError **)error;
+- (BOOL)sendMessage:(nonnull SCLSessionMessage *)message toPeers:(nonnull NSArray<MCPeerID *> *)peerIDs withMode:(MCSessionSendDataMode)mode error:(NSError **)error;
 
-- (void)handleReceivedMessage:(SCLSessionMessage *)message fromPeer:(MCPeerID *)peerID;
+- (void)handleReceivedMessage:(nonnull SCLSessionMessage *)message fromPeer:(nonnull MCPeerID *)peerID;
 
 @end
 
-extern NSString *const SCLSessionManagerDidReceiveMessageNotification;
+extern NSNotificationName const SCLSessionManagerDidReceiveMessageNotification;
 extern NSString *const SCLSessionManagerMessageUserInfoKey;
 extern NSString *const SCLSessionManagerPeerIDUserInfoKey;
+
+NS_ASSUME_NONNULL_END

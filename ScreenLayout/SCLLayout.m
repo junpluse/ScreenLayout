@@ -282,8 +282,8 @@
 @end
 
 
-NSString *const SCLLayoutDidActivateConstraintsNotification = @"SCLLayoutDidActivateConstraintsNotification";
-NSString *const SCLLayoutDidDeactivateConstraintsNotification = @"SCLLayoutDidDeactivateConstraintsNotification";
+NSNotificationName const SCLLayoutDidActivateConstraintsNotification = @"SCLLayoutDidActivateConstraintsNotification";
+NSNotificationName const SCLLayoutDidDeactivateConstraintsNotification = @"SCLLayoutDidDeactivateConstraintsNotification";
 NSString *const SCLLayoutConstraintsUserInfoKey = @"constraints";
 NSString *const SCLLayoutAffectedScreensUserInfoKey = @"affectedScreens";
 

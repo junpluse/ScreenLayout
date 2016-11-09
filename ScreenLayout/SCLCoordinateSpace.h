@@ -13,8 +13,8 @@
 #define SCLCoordinateSpaceAvailable ([[UIDevice currentDevice].systemVersion compare:@"8.0" options:NSNumericSearch] != NSOrderedAscending)
 
 
-extern CGVector SCLConvertVectorBetweenCoordinateSpaces(CGVector vector, id<UICoordinateSpace> from, id<UICoordinateSpace> to) NS_AVAILABLE_IOS(8_0);
-extern CGFloat SCLConvertAngleBetweenCoordinateSpaces(CGFloat angle, id<UICoordinateSpace> from, id<UICoordinateSpace> to) NS_AVAILABLE_IOS(8_0);
+extern CGVector SCLConvertVectorBetweenCoordinateSpaces(CGVector vector, _Nullable id<UICoordinateSpace> from, _Nullable id<UICoordinateSpace> to) NS_AVAILABLE_IOS(8_0);
+extern CGFloat SCLConvertAngleBetweenCoordinateSpaces(CGFloat angle, _Nullable id<UICoordinateSpace> from, _Nullable id<UICoordinateSpace> to) NS_AVAILABLE_IOS(8_0);
 
 
 /**
@@ -22,10 +22,10 @@ extern CGFloat SCLConvertAngleBetweenCoordinateSpaces(CGFloat angle, id<UICoordi
  */
 @protocol SCLCoordinateSpace <UICoordinateSpace>
 
-- (CGVector)convertVector:(CGVector)vector toCoordinateSpace:(id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
-- (CGVector)convertVector:(CGVector)vector fromCoordinateSpace:(id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
-- (CGFloat)convertAngle:(CGFloat)angle toCoordinateSpace:(id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
-- (CGFloat)convertAngle:(CGFloat)angle fromCoordinateSpace:(id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
+- (CGVector)convertVector:(CGVector)vector toCoordinateSpace:(nullable id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
+- (CGVector)convertVector:(CGVector)vector fromCoordinateSpace:(nullable id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
+- (CGFloat)convertAngle:(CGFloat)angle toCoordinateSpace:(nullable id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
+- (CGFloat)convertAngle:(CGFloat)angle fromCoordinateSpace:(nullable id<UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 
 @end
 

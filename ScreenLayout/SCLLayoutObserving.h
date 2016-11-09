@@ -17,7 +17,7 @@
  @abstract This message is sent to the receiver when the SCLLayout system has changed and that effect some of the screens.
  @param affectedScreens An array containing the screens affected by the change.
  */
-- (void)layoutDidChangeForScreens:(NSArray<SCLScreen *> *)affectedScreens;
+- (void)layoutDidChangeForScreens:(nonnull NSArray<SCLScreen *> *)affectedScreens;
 
 @end
 
@@ -32,19 +32,19 @@
  @return An object to act as the observer.
  @discussion To unregister observations, you pass the object returned by this method to removeObserver:.
  */
-+ (id<SCLLayoutObserving>)addLayoutObserverWithBlock:(void(^)(NSArray<SCLScreen *> *affectedScreens))block;
++ (nonnull id<SCLLayoutObserving>)addLayoutObserverWithBlock:(nonnull void(^)(NSArray<SCLScreen *> * _Nonnull affectedScreens))block;
 
 /**
  @abstract Adds an entry to the receiver's notification table with an observer.
  @param observer The object registering as an observer. Must not be nil.
  @discussion Be sure to invoke removeObserver: before observer specified in addObserver: is deallocated.
  */
-+ (void)addLayoutObserver:(id<SCLLayoutObserving>)observer;
++ (void)addLayoutObserver:(nonnull id<SCLLayoutObserving>)observer;
 
 /**
  @abstract Removes the entry specifying a given observer from the receiver's notification table.
  @param observer The observer to remove from the notification table.
  */
-+ (void)removeLayoutObserver:(id<SCLLayoutObserving>)observer;
++ (void)removeLayoutObserver:(nullable id<SCLLayoutObserving>)observer;
 
 @end

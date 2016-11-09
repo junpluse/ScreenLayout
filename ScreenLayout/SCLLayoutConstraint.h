@@ -12,6 +12,8 @@
 @class SCLLayoutConstraint;
 @class SCLLayoutConstraintItem;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  @abstract SCLLayoutConstraint defines a relative geometry relationship between screens.
  */
@@ -22,22 +24,22 @@
  @param items An array constaining the SCLLayoutConstraintItem objects.
  @return The newly-initialized constraint.
  */
-- (instancetype)initWithItems:(NSArray<SCLLayoutConstraintItem *> *)items NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItems:(nonnull NSArray<SCLLayoutConstraintItem *> *)items NS_DESIGNATED_INITIALIZER;
 
 /**
  @abstract The items in the receiver.
  */
-@property (readonly, nonatomic, copy) NSArray<SCLLayoutConstraintItem *> *items;
+@property (readonly, nonatomic, copy, nonnull) NSArray<SCLLayoutConstraintItem *> *items;
 
 /**
  @abstract The screens in the receiver's items.
  */
-@property (readonly, nonatomic) NSArray<SCLScreen *> *screens;
+@property (readonly, nonatomic, nonnull) NSArray<SCLScreen *> *screens;
 
 /**
  @abstract The unique identifier of the receiver.
  */
-@property (readonly, nonatomic) NSString *identifier;
+@property (readonly, nonatomic, nonnull) NSString *identifier;
 
 @end
 
@@ -53,12 +55,12 @@
  @param rotation The rotation of screen in the layout (in radians).
  @return The newly-initialized constraint.
  */
-- (instancetype)initWithScreen:(SCLScreen *)screen anchor:(CGPoint)anchor rotation:(CGFloat)rotation NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithScreen:(nonnull SCLScreen *)screen anchor:(CGPoint)anchor rotation:(CGFloat)rotation NS_DESIGNATED_INITIALIZER;
 
 /**
  @abstract The screen which the receiver defines the geometry for.
  */
-@property (readonly, nonatomic, copy) SCLScreen *screen;
+@property (readonly, nonatomic, copy, nonnull) SCLScreen *screen;
 
 /**
  @abstract The anchor point in the local coordinate system (bounds) of screen.
@@ -71,3 +73,5 @@
 @property (readonly, nonatomic) CGFloat rotation;
 
 @end
+
+NS_ASSUME_NONNULL_END

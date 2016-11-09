@@ -9,6 +9,8 @@
 #import "ScreenLayoutBase.h"
 #import "SCLLayoutConstraint.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  @abstract A SCLLayout instance represents a group of screens connected each other by chained constraints. SCLLayout also provides a bunch of screen-to-screen geometry conversion methods.
  */
@@ -18,31 +20,31 @@
  @abstract Returns the layout that contains the specified screen.
  @return The layout containing screen.
  */
-+ (SCLLayout *)layoutForScreen:(SCLScreen *)screen;
++ (nullable SCLLayout *)layoutForScreen:(nonnull SCLScreen *)screen;
 
 /**
  @abstract The screens in the receiver.
  */
-@property (readonly, nonatomic) NSArray<SCLScreen *> *screens;
+@property (readonly, nonatomic, nonnull) NSArray<SCLScreen *> *screens;
 
 /**
  @abstract The active constraints composing the receiver.
  */
-@property (readonly, nonatomic) NSArray<SCLLayoutConstraint *> *constraints;
+@property (readonly, nonatomic, nonnull) NSArray<SCLLayoutConstraint *> *constraints;
 
 /**
  @abstract Returns the constraints that contain all of the specified screens.
  @param screens One or more screens in the layout.
  @return The constraints containing all of screens.
  */
-- (NSArray<SCLLayoutConstraint *> *)constraintsContainingScreens:(NSArray<SCLScreen *> *)screens;
+- (nonnull NSArray<SCLLayoutConstraint *> *)constraintsContainingScreens:(nonnull NSArray<SCLScreen *> *)screens;
 
 /**
  @abstract Returns the smallest rectangle that contains all of screens in the receiver, in the specified screen's coordinate system (bounds).
  @param screen A screen on which the bounds took place.
  @return The bounding rectanble in screen.
  */
-- (CGRect)boundsInScreen:(SCLScreen *)screen;
+- (CGRect)boundsInScreen:(nonnull SCLScreen *)screen;
 
 /**
  @abstract Converts a point from the coordinate system of a screen to that of another one.
@@ -51,7 +53,7 @@
  @param toScreen The screen into whose coordinate system point is to be converted.
  @return The point converted to the coordinate system of toScreen.
  */
-- (CGPoint)convertPoint:(CGPoint)point fromScreen:(SCLScreen *)fromScreen toScreen:(SCLScreen *)toScreen;
+- (CGPoint)convertPoint:(CGPoint)point fromScreen:(nullable SCLScreen *)fromScreen toScreen:(nullable SCLScreen *)toScreen;
 
 /**
  @abstract Converts a rectangle from the coordinate system of a screen to that of another one.
@@ -60,7 +62,7 @@
  @param toScreen The screen into whose coordinate system rect is to be converted.
  @return The rectangle converted to the coordinate system of toScreen.
  */
-- (CGRect)convertRect:(CGRect)rect fromScreen:(SCLScreen *)fromScreen toScreen:(SCLScreen *)toScreen;
+- (CGRect)convertRect:(CGRect)rect fromScreen:(nullable SCLScreen *)fromScreen toScreen:(nullable SCLScreen *)toScreen;
 
 /**
  @abstract Converts a vector from the coordinate system of a screen to that of another one.
@@ -69,7 +71,7 @@
  @param toScreen The screen into whose coordinate system vector is to be converted.
  @return The vector converted to the coordinate system of toScreen.
  */
-- (CGVector)convertVector:(CGVector)vector fromScreen:(SCLScreen *)fromScreen toScreen:(SCLScreen *)toScreen;
+- (CGVector)convertVector:(CGVector)vector fromScreen:(nullable SCLScreen *)fromScreen toScreen:(nullable SCLScreen *)toScreen;
 
 /**
  @abstract Converts an angle from the coordinate system of a screen to that of another one.
@@ -78,7 +80,7 @@
  @param toScreen The screen into whose coordinate system angle is to be converted.
  @return The angle converted to the coordinate system of toScreen.
  */
-- (CGFloat)convertAngle:(CGFloat)angle fromScreen:(SCLScreen *)fromScreen toScreen:(SCLScreen *)toScreen;
+- (CGFloat)convertAngle:(CGFloat)angle fromScreen:(nullable SCLScreen *)fromScreen toScreen:(nullable SCLScreen *)toScreen;
 
 @end
 
@@ -91,7 +93,7 @@
  @return An array constaining the screens affected by the constraints.
  @discussion This method also posts a SCLLayoutDidActivateConstraintsNotification with a nil object and a userInfo dictionary containing the constraints and the affected screens.
  */
-+ (NSArray<SCLScreen *> *)activateConstraints:(NSArray<SCLLayoutConstraint *> *)constraints;
++ (nonnull NSArray<SCLScreen *> *)activateConstraints:(nonnull NSArray<SCLLayoutConstraint *> *)constraints;
 
 /**
  @abstract Deactivates each constraint in the specified array, and returns an array that contains the screens affected by the deactivation.
@@ -99,7 +101,7 @@
  @return An array constaining the screens affected by the constraints.
  @discussion This method also posts a SCLLayoutDidDeactivateConstraintsNotification with a nil object and a userInfo dictionary containing the constraints and the affected screens.
  */
-+ (NSArray<SCLScreen *> *)deactivateConstraints:(NSArray<SCLLayoutConstraint *> *)constraints;
++ (nonnull NSArray<SCLScreen *> *)deactivateConstraints:(nonnull NSArray<SCLLayoutConstraint *> *)constraints;
 
 @end
 
@@ -114,7 +116,9 @@
 @end
 
 
-extern NSString *const SCLLayoutDidActivateConstraintsNotification;
-extern NSString *const SCLLayoutDidDeactivateConstraintsNotification;
+extern NSNotificationName const SCLLayoutDidActivateConstraintsNotification;
+extern NSNotificationName const SCLLayoutDidDeactivateConstraintsNotification;
 extern NSString *const SCLLayoutConstraintsUserInfoKey;
 extern NSString *const SCLLayoutAffectedScreensUserInfoKey;
+
+NS_ASSUME_NONNULL_END

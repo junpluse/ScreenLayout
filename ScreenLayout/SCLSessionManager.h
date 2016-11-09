@@ -13,6 +13,8 @@
 
 @protocol SCLSessionManagerDelegate;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  @abstract A SCLSessionManager wraps a MCSession object to communicate screen layout informations among all peers.
  @discussion A SCLSessionManager exchanges [SCLScreen mainScreen] among all peers connected to the session, and automatically synchronize all of activate/deactivate events of SCLLayoutConstraint. If you activate a constraint, the session manager sends it to the other peers in the session. The receivers activate it in the its local layout system too.
@@ -33,25 +35,25 @@
  @return The newly-initialized session manager.
  @discussion The parameters passed to the receiver's MCSession object.
  */
-- (instancetype)initWithSecurityIdentity:(NSArray *)identity encryptionPreference:(MCEncryptionPreference)encryptionPreference NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSecurityIdentity:(nullable NSArray *)identity encryptionPreference:(MCEncryptionPreference)encryptionPreference NS_DESIGNATED_INITIALIZER;
 
 /**
  @abstract The delegate object that handles session-related events. May be nil.
  @discussion A SCLSessionManager forwards all of MCSessionDelegate method calls to its delegate. Note that they are always called from main thread.
  */
-@property (nonatomic, weak) id<SCLSessionManagerDelegate> delegate;
+@property (nonatomic, weak, nullable) id<SCLSessionManagerDelegate> delegate;
 
 /**
  @abstract The MCSession object managed by the receiver.
  */
-@property (readonly, nonatomic) MCSession *session;
+@property (readonly, nonatomic, nonnull) MCSession *session;
 
 /**
  @abstract Returns the screen object provided from the specified peerID.
  @param peerID The peer which provided the screen.
  @return The screen provided from peerID, or nil if no screens has received from the peerID.
  */
-- (SCLScreen *)screenForPeer:(MCPeerID *)peerID;
+- (nullable SCLScreen *)screenForPeer:(nullable MCPeerID *)peerID;
 
 /**
  @abstract Disconnects from the session.
@@ -69,7 +71,7 @@
  @param errorHandler A block to handle errors occurred in the advertise/browse operations.
  @discussion This method runs a pair of MCNearbyServiceAdvertiser/MCNearbyServiceBrowser instances internally and invites/accepts all peers.
  */
-- (void)startPeerInvitationsWithServiceType:(NSString *)serviceType errorHandler:(void(^)(NSError *error))errorHandler;
+- (void)startPeerInvitationsWithServiceType:(nonnull NSString *)serviceType errorHandler:(nullable void(^)(NSError * _Nullable error))errorHandler;
 
 /**
  @abstract Stops automatic peer invitations.
@@ -87,9 +89,11 @@
  @param manager The session manager through the screen was received.
  @param screen The received screen.
  */
-- (void)sessionManager:(SCLSessionManager *)manager didReceiveScreen:(SCLScreen *)screen;
+- (void)sessionManager:(nonnull SCLSessionManager *)manager didReceiveScreen:(nonnull SCLScreen *)screen;
 
 @end
 
-extern NSString *const SCLSessionManagerDidReceiveScreenNotification;
+extern NSNotificationName const SCLSessionManagerDidReceiveScreenNotification;
 extern NSString *const SCLSessionManagerScreenUserInfoKey;
+
+NS_ASSUME_NONNULL_END

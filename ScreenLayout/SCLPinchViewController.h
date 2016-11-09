@@ -22,18 +22,18 @@
  @abstract The session manager object managed by the receiver.
  @discussion The pinch view controller creates a SCLSessionManager object at initialization time and sets itself to delegate. As default the pinch view controller do nothing in own MCSessionDelegate or SCLSessionManager delegate methods so you don't need to call super in your subclass's implemetations.
  */
-@property (readonly, nonatomic, strong) SCLSessionManager *sessionManager;
+@property (readonly, nonatomic, strong, nonnull) SCLSessionManager *sessionManager;
 
 /**
  @abstract The motion manager object managed by the receiver.
  @discussion The pinch view controller creates a SCLMotionManager object at initialization time. The pinch view controller automatically enables it in viewDidAppear: and disables in viewWillDisappear:.
  */
-@property (readonly, nonatomic, strong) SCLMotionManager *motionManager;
+@property (readonly, nonatomic, strong, nonnull) SCLMotionManager *motionManager;
 
 /**
  @abstract The layout manager object managed by the receiver.
  @discussion The pinch view controller creates a SCLPinchLayoutManager object at initialization time and adds its gestureRecognizer object to own view. The pinch view controller automatically enables it in viewDidAppear: and disables in viewWillDisappear:.
  */
-@property (readonly, nonatomic, strong) SCLPinchLayoutManager *layoutManager;
+@property (readonly, nonatomic, strong, nonnull) SCLPinchLayoutManager *layoutManager;
 
 @end
