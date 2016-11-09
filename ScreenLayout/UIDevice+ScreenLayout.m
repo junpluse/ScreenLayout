@@ -207,8 +207,8 @@ typedef struct SCLDeviceScreenSpecs {
         else if (digit1 == 4) {
             // iPod touch 4th Gen (4,1)
         }
-        else if (digit1 == 5) {
-            // iPod touch 5th Gen (5,1)
+        else if (digit1 == 5 || digit1 == 6) {
+            // iPod touch 5th Gen (5,1) or 6th Gen (6,1)
             specs.ppi            = 326;
             specs.margins.top    = 0.69;
             specs.margins.left   = 0.17;
