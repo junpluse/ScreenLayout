@@ -52,14 +52,14 @@ class ViewController: SCLPinchViewController {
         var frame: CGRect = self.view.bounds
         
         let localScreen = SCLScreen.main()
-        if (localScreen?.layout != nil) {
+        if let layout = localScreen.layout {
             // align image rotation to the first screen in the layout
-            let originScreen: SCLScreen = localScreen!.layout.screens[0] 
+            let originScreen: SCLScreen = layout.screens.first!
             angle = originScreen.convertAngle(0.0, to: self.view)
-            
+
             // extend image frame to the entire bounds of the layout
-            frame = (localScreen?.layout.bounds(in: localScreen))!
-            frame = (localScreen?.convert(frame, to: self.view))!
+            frame = layout.bounds(in: localScreen)
+            frame = localScreen.convert(frame, to: self.view)
         }
         
         UIView.animate(withDuration: 0.25, animations: { () -> Void in
@@ -83,7 +83,7 @@ class ViewController: SCLPinchViewController {
     }
     
     // screen layout changed
-    override func layoutDidChange(for affectedScreens: [SCLScreen]!) {
+    override func layoutDidChange(for affectedScreens: [SCLScreen]) {
         self.updateLabels()
         self.updateImageFrame()
     }
