@@ -24,9 +24,7 @@
 
 + (NSArray *)deck
 {
-    static const NSUInteger numberOfCards = 53;
-    
-    NSMutableArray *deck = [[NSMutableArray alloc] initWithCapacity:numberOfCards];
+    NSMutableArray *deck = [[NSMutableArray alloc] init];
     
     for (NSUInteger type = 0; type < 4; type++) {
         for (NSUInteger number = 1; number <= 13; number++) {
