@@ -73,7 +73,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@ %p; type=%lu; number:%lu>", NSStringFromClass([self class]), self, (unsigned long)self.type, (unsigned long)self.number];
+    return [NSString stringWithFormat:@"<%@ %p; type=%lu; number=%lu>", NSStringFromClass([self class]), self, (unsigned long)self.type, (unsigned long)self.number];
 }
 
 - (id)copyWithZone:(NSZone *)zone
