@@ -13,7 +13,6 @@
 		BFADF0181A6E1581008BB36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFADF0161A6E1581008BB36E /* Main.storyboard */; };
 		BFADF01A1A6E1581008BB36E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFADF0191A6E1581008BB36E /* Images.xcassets */; };
 		BFADF01D1A6E1581008BB36E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFADF01B1A6E1581008BB36E /* LaunchScreen.xib */; };
-		BFADF0291A6E1581008BB36E /* DealerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFADF0281A6E1581008BB36E /* DealerTests.m */; };
 		BFADF0341A6E15CC008BB36E /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = BFADF0331A6E15CC008BB36E /* Card.m */; };
 		BFADF0461A6E5571008BB36E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFADF0451A6E5571008BB36E /* CardView.m */; };
 		BFADF04D1A6F8AC0008BB36E /* CardUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFADF04C1A6F8AC0008BB36E /* CardUpdate.m */; };
@@ -22,13 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BFADF0231A6E1581008BB36E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFADF0011A6E1581008BB36E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BFADF0081A6E1581008BB36E;
-			remoteInfo = Dealer;
-		};
 		BFCF44431DCF315C008A57DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFADF0351A6E15DA008BB36E /* ScreenLayout.xcodeproj */;
@@ -84,9 +76,6 @@
 		BFADF0171A6E1581008BB36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFADF0191A6E1581008BB36E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFADF01C1A6E1581008BB36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BFADF0221A6E1581008BB36E /* DealerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DealerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFADF0271A6E1581008BB36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFADF0281A6E1581008BB36E /* DealerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DealerTests.m; sourceTree = "<group>"; };
 		BFADF0321A6E15CC008BB36E /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		BFADF0331A6E15CC008BB36E /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		BFADF0351A6E15DA008BB36E /* ScreenLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ScreenLayout.xcodeproj; path = ../../ScreenLayout.xcodeproj; sourceTree = "<group>"; };
@@ -105,13 +94,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFADF01F1A6E1581008BB36E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				BFADF00B1A6E1581008BB36E /* Dealer */,
-				BFADF0251A6E1581008BB36E /* DealerTests */,
 				BFADF00A1A6E1581008BB36E /* Products */,
 				DC9080432AE84E60D1338D52 /* Frameworks */,
 			);
@@ -129,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				BFADF0091A6E1581008BB36E /* Dealer.app */,
-				BFADF0221A6E1581008BB36E /* DealerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,23 +140,6 @@
 			children = (
 				BFADF00D1A6E1581008BB36E /* Info.plist */,
 				BFADF00E1A6E1581008BB36E /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BFADF0251A6E1581008BB36E /* DealerTests */ = {
-			isa = PBXGroup;
-			children = (
-				BFADF0281A6E1581008BB36E /* DealerTests.m */,
-				BFADF0261A6E1581008BB36E /* Supporting Files */,
-			);
-			path = DealerTests;
-			sourceTree = "<group>";
-		};
-		BFADF0261A6E1581008BB36E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BFADF0271A6E1581008BB36E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,24 +184,6 @@
 			productReference = BFADF0091A6E1581008BB36E /* Dealer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BFADF0211A6E1581008BB36E /* DealerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BFADF02F1A6E1581008BB36E /* Build configuration list for PBXNativeTarget "DealerTests" */;
-			buildPhases = (
-				BFADF01E1A6E1581008BB36E /* Sources */,
-				BFADF01F1A6E1581008BB36E /* Frameworks */,
-				BFADF0201A6E1581008BB36E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BFADF0241A6E1581008BB36E /* PBXTargetDependency */,
-			);
-			name = DealerTests;
-			productName = DealerTests;
-			productReference = BFADF0221A6E1581008BB36E /* DealerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,10 +195,6 @@
 				TargetAttributes = {
 					BFADF0081A6E1581008BB36E = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					BFADF0211A6E1581008BB36E = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = BFADF0081A6E1581008BB36E;
 					};
 				};
 			};
@@ -277,7 +218,6 @@
 			projectRoot = "";
 			targets = (
 				BFADF0081A6E1581008BB36E /* Dealer */,
-				BFADF0211A6E1581008BB36E /* DealerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,13 +250,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFADF0201A6E1581008BB36E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -333,22 +266,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFADF01E1A6E1581008BB36E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFADF0291A6E1581008BB36E /* DealerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BFADF0241A6E1581008BB36E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BFADF0081A6E1581008BB36E /* Dealer */;
-			targetProxy = BFADF0231A6E1581008BB36E /* PBXContainerItemProxy */;
-		};
 		BFCF444A1DCF31A8008A57DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ScreenLayout;
@@ -500,42 +420,6 @@
 			};
 			name = Release;
 		};
-		BFADF0301A6E1581008BB36E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DealerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eje-c.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dealer.app/Dealer";
-			};
-			name = Debug;
-		};
-		BFADF0311A6E1581008BB36E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DealerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eje-c.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dealer.app/Dealer";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,15 +437,6 @@
 			buildConfigurations = (
 				BFADF02D1A6E1581008BB36E /* Debug */,
 				BFADF02E1A6E1581008BB36E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BFADF02F1A6E1581008BB36E /* Build configuration list for PBXNativeTarget "DealerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFADF0301A6E1581008BB36E /* Debug */,
-				BFADF0311A6E1581008BB36E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
