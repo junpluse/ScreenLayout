@@ -12,20 +12,12 @@
 		BF7235931A38572A00ECA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7235911A38572A00ECA04D /* Main.storyboard */; };
 		BF7235951A38572A00ECA04D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7235941A38572A00ECA04D /* Images.xcassets */; };
 		BF7235981A38572A00ECA04D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7235961A38572A00ECA04D /* LaunchScreen.xib */; };
-		BF7235A41A38572A00ECA04D /* PinchCanvasSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7235A31A38572A00ECA04D /* PinchCanvasSwiftTests.swift */; };
 		BF7235BD1A385FF600ECA04D /* Photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF7235BC1A385FF600ECA04D /* Photo.jpg */; };
 		BFCF446C1DCF320E008A57DB /* ScreenLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCF44671DCF3201008A57DB /* ScreenLayout.framework */; };
 		BFCF446D1DCF320E008A57DB /* ScreenLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFCF44671DCF3201008A57DB /* ScreenLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BF72359E1A38572A00ECA04D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF7235801A38572A00ECA04D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF7235871A38572A00ECA04D;
-			remoteInfo = PinchCanvasSwift;
-		};
 		BFCF44661DCF3201008A57DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF7235AD1A38574600ECA04D /* ScreenLayout.xcodeproj */;
@@ -78,9 +70,6 @@
 		BF7235921A38572A00ECA04D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF7235941A38572A00ECA04D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF7235971A38572A00ECA04D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BF72359D1A38572A00ECA04D /* PinchCanvasSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinchCanvasSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF7235A21A38572A00ECA04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF7235A31A38572A00ECA04D /* PinchCanvasSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCanvasSwiftTests.swift; sourceTree = "<group>"; };
 		BF7235AD1A38574600ECA04D /* ScreenLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ScreenLayout.xcodeproj; path = ../../ScreenLayout.xcodeproj; sourceTree = "<group>"; };
 		BF7235BC1A385FF600ECA04D /* Photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,13 +83,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF72359A1A38572A00ECA04D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				BF72358A1A38572A00ECA04D /* PinchCanvasSwift */,
-				BF7235A01A38572A00ECA04D /* PinchCanvasSwiftTests */,
 				BF7235891A38572A00ECA04D /* Products */,
 				BF7235AD1A38574600ECA04D /* ScreenLayout.xcodeproj */,
 			);
@@ -118,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				BF7235881A38572A00ECA04D /* PinchCanvasSwift.app */,
-				BF72359D1A38572A00ECA04D /* PinchCanvasSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,23 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				BF72358C1A38572A00ECA04D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BF7235A01A38572A00ECA04D /* PinchCanvasSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				BF7235A31A38572A00ECA04D /* PinchCanvasSwiftTests.swift */,
-				BF7235A11A38572A00ECA04D /* Supporting Files */,
-			);
-			path = PinchCanvasSwiftTests;
-			sourceTree = "<group>";
-		};
-		BF7235A11A38572A00ECA04D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF7235A21A38572A00ECA04D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,24 +157,6 @@
 			productReference = BF7235881A38572A00ECA04D /* PinchCanvasSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BF72359C1A38572A00ECA04D /* PinchCanvasSwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF7235AA1A38572A00ECA04D /* Build configuration list for PBXNativeTarget "PinchCanvasSwiftTests" */;
-			buildPhases = (
-				BF7235991A38572A00ECA04D /* Sources */,
-				BF72359A1A38572A00ECA04D /* Frameworks */,
-				BF72359B1A38572A00ECA04D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF72359F1A38572A00ECA04D /* PBXTargetDependency */,
-			);
-			name = PinchCanvasSwiftTests;
-			productName = PinchCanvasSwiftTests;
-			productReference = BF72359D1A38572A00ECA04D /* PinchCanvasSwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,11 +169,6 @@
 					BF7235871A38572A00ECA04D = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 0810;
-					};
-					BF72359C1A38572A00ECA04D = {
-						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0810;
-						TestTargetID = BF7235871A38572A00ECA04D;
 					};
 				};
 			};
@@ -252,7 +192,6 @@
 			projectRoot = "";
 			targets = (
 				BF7235871A38572A00ECA04D /* PinchCanvasSwift */,
-				BF72359C1A38572A00ECA04D /* PinchCanvasSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,13 +225,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF72359B1A38572A00ECA04D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -305,22 +237,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF7235991A38572A00ECA04D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF7235A41A38572A00ECA04D /* PinchCanvasSwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BF72359F1A38572A00ECA04D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF7235871A38572A00ECA04D /* PinchCanvasSwift */;
-			targetProxy = BF72359E1A38572A00ECA04D /* PBXContainerItemProxy */;
-		};
 		BFCF446B1DCF3209008A57DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ScreenLayout;
@@ -466,44 +385,6 @@
 			};
 			name = Release;
 		};
-		BF7235AB1A38572A00ECA04D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PinchCanvasSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.junpluse.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinchCanvasSwift.app/PinchCanvasSwift";
-			};
-			name = Debug;
-		};
-		BF7235AC1A38572A00ECA04D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PinchCanvasSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.junpluse.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinchCanvasSwift.app/PinchCanvasSwift";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -521,15 +402,6 @@
 			buildConfigurations = (
 				BF7235A81A38572A00ECA04D /* Debug */,
 				BF7235A91A38572A00ECA04D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF7235AA1A38572A00ECA04D /* Build configuration list for PBXNativeTarget "PinchCanvasSwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF7235AB1A38572A00ECA04D /* Debug */,
-				BF7235AC1A38572A00ECA04D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
