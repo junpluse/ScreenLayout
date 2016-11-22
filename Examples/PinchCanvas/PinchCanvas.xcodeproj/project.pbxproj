@@ -95,7 +95,7 @@
 			children = (
 				BF356BB41A27052100346FD0 /* PinchCanvas */,
 				BF356BB31A27052100346FD0 /* Products */,
-				BF356BDB1A27055A00346FD0 /* ScreenLayout.xcodeproj */,
+				BF9B715B1DE47039003611C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +130,14 @@
 				BF356BB71A27052100346FD0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF9B715B1DE47039003611C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF356BDB1A27055A00346FD0 /* ScreenLayout.xcodeproj */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BFCF44531DCF31E4008A57DB /* Products */ = {
